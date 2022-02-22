@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+    <title>Тестовое задание</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Блок с фото -->
+        <div class="photo">
+            <img src="/img/beautiful-young-asian-woman-with-clean-fresh-skin-beige-background-face-care-facial-treatment-cosmetology-beauty-spa-asian-women-portrait_65293-7872 1.png" alt="photo">
+            <div class="hello_my_friend">Hello <br> my friend</div>
+        </div>
+         <!-- Блок с формой -->
+        <div class="form_main">
+                <form action="" method="post" class="form1" name="test_form" id="test_form">
+                    <div class="text_input">
+                        <p>Ваше имя</p>
+                        <div><input type="text" name="name" placeholder="Имя" size="20" maxlength="40" autocomplete="on" class="inputbox" required /></div>
+                    </div>
+                    <div class="tel_input">
+                        <p>Телефон</p>
+                        <input type="text" name="tel" id="tel" class="inputbox" placeholder="Номер телефона" required
+                        onfocus="(this.value == '0123456789') && (this.value = '')" 
+                        onblur="(this.value == '') && (this.value = '0123456789')">
+                    </div>
+                    <div class="password_input">
+                        <p>Пароль</p>
+                        <input type="password" name="password" placeholder="●●●●●●●" size="20" maxlength="20" minlength="8" autocomplete="on" class="inputbox" pattern="[0-9a-fA-F]{4,8}" autocomplete="on" required />
+                    </div>
+                    <div class="label_radio">
+                        <label class="label">
+                            <input name="job" type="radio" value="lovejob" class="radio" required> 
+                            <span class="fake"></span>
+                            <span class="text">Люблю свою работу <br></span>  
+                        </label>
+                        <label class="label">
+                            <input name="job" type="radio" value="bestjob" class="radio" required> 
+                            <span class="fake"></span>
+                            <span class="text">Очень люблю свою работу</span>  
+                        </label>
+                    </div>
+                    <div class= "send">
+                        <input type="button" class="button_call" id="submit_tel" name="submit_tel" value="Отправить анкету">
+                    </div>
+                    <div class="result" id="result_form"></div>    
+                </form>
+        </div>
+    </div>
+    <!-- Подключаем скрипты-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/jquery.maskedinput.js"></script>
+    <script type="text/javascript">
+        jQuery(function($){
+         $("#tel").mask("+7(999) 999-9999");
+        });
+     </script>
+     <!-- Чтобы не нажимался Enter-->
+     <script>
+     $(document).ready(function() {
+        $(form).keydown(function(event){
+          if(event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+        }
+     })});
+    
+     </script>
+  </body>
+</html>

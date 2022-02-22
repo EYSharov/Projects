@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/callback.css">
+    <title>Обратный звонок</title>
+</head>
+<body>
+    <!--Modal -->
+    <div id="modal" class="modal">
+        <div class="text" align="center">
+            <div id="blok_tel" class="blok_tel">
+                <form action="" method="post" class="form1" name="callback_form" id="callback_form">
+                    <div> <h2>ЗАКАЗ ЗВОНКА</h2></div>
+                    <div class="result">Оставьте номер Вашего телефона, email и мы перезвоним Вам!</div>
+                    <div><input type="text" name="name" placeholder="Ваше имя" size="20" maxlength="40" autocomplete="on" /></div>
+                    <div><input type="email" name="email" placeholder="E-mail" size="20" maxlength="40" autocomplete="on" /></div>
+                    <div>
+                    <input type="text" name="tel" id="tel" class="inputbox" placeholder="+7(999) 999-9999"
+                    onfocus="(this.value == '0123456789') && (this.value = '')" 
+                    onblur="(this.value == '') && (this.value = '0123456789')">
+                    </div>
+                    <div class= "text-button"><input type="submit" class="button button_call" id="submit_tel" name="submit_tel"></div>
+                </form>
+                <div class="result" id="result_form"></div>
+            </div>
+            <a href="#close" title="Закрыть"></a>
+        </div>
+      </div>
+        <!--Button -->
+            <div type="button" class="callback-bt">
+                <a href="#modal">
+                    <div class="text-call"> 
+                        <img src="/tel.png" alt="Заказ звонка">
+                        <span>Заказать<br>звонок</span>
+                    </div>
+                </a>
+            </div>
+        <!--Scripts/Libriry -->
+            <script src="jquery.min.js"></script>
+            <script src="ajax_callback.js"></script>
+            <script src="jquery.maskedinput.js"></script>
+            <!--Mask phone -->
+            <script type="text/javascript">
+            jQuery(function($){
+             $("#tel").mask("+7(999) 999-9999");
+            });
+             </script>
+        </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+    <title>Todo</title>
+</head>
+
+<body>
+
+    <div class="modal-wrapper">
+        <form class="modal-window">
+            <div class="modal-header">
+                <h1>Add todo</h1>
+            </div>
+            <div class="modal-body">
+                <input class="modal-checkbox" type="checkbox">
+                <input class="modal-input"  type="text" placeholder="todo">
+            </div>
+            <div class="modal-footer">
+                <button class="btn add-todo-button">Add</button>
+                <button class="btn btn-cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <section class="main">
+        <ol class="todo">
+        </ol>
+        <button class="open-modal btn ">Add new ToDo</button>
+    </section>
+
+</body>
+
+</html>
